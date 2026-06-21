@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanya Senior - Ruang Teman UNSOED</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Itim&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body class="bg-white text-[#3A3A3A] flex flex-col min-h-screen font-sans" style="font-family: 'Inria Sans', sans-serif;">
+
+  <!-- ================= NAVIGASI ================= -->
+  <nav class="bg-white border-b border-[#A7D8F5]/20 sticky top-0 z-50 shadow-sm font-sans" style="font-family: 'Inria Sans', sans-serif;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <svg class="w-10 h-10 transition-transform group-hover:scale-110" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+            <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+            <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-semibold text-lg text-[#3A3A3A] tracking-wide" style="font-family: 'Itim', cursive;">
+              Ruang Teman
+            </span>
+            <span class="text-xs text-[#6B6B6B] leading-none">Unsoed Student Support</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Beranda</a>
+          <a href="tanya-senior.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+          <a href="ruang-cerita.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+          <a href="self-assessment.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+          <a href="roadmap.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+          <a href="artikel.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+          
+          <a href="index.html" class="ml-2 px-6 py-2 bg-[#7CC6F2] text-white rounded-full text-sm font-medium hover:bg-[#7CC6F2]/90 transition-colors flex items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Masuk
+          </a>
+        </div>
+
+        <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg hover:bg-[#FFF8ED] transition-colors">
+          <i class="fa-solid fa-bars text-2xl text-[#3A3A3A]" id="menu-icon"></i>
+        </button>
+      </div>
+    <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-[#A7D8F5]/20 bg-white">
+      <div class="flex flex-col gap-1 px-4">
+        <a href="index.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Beranda</a>
+        <a href="tanya-senior.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+        <a href="ruang-cerita.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+        <a href="self-assessment.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+        <a href="roadmap.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+        <a href="artikel.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+        <a href="contact.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+        
+        <!-- Tombol Masuk/Dashboard di Mobile -->
+        <a href="dashboard.html" class="mt-4 py-2.5 bg-[#7CC6F2] text-white text-center rounded-full text-sm font-medium hover:bg-[#7CC6F2]/90 transition-colors block shadow-sm">
+          <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Dashboard / Masuk
+        </a>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow bg-gradient-to-b from-[#FFF8ED] to-white pb-16">
+    
+    <div class="bg-gradient-to-br from-[#A7D8F5]/20 to-[#FFF8ED] py-12 px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <h1 class="text-4xl font-semibold text-[#3A3A3A] animate-fade-up" style="font-family: 'Itim', cursive;">
+          Ruang Cerita
+        </h1>
+        <p class="text-lg text-[#6B6B6B] max-w-2xl mx-auto animate-fade-up" style="animation-delay: 0.15s;">
+          Ruang aman untuk berbagi pengalaman, perasaan, dan mendapatkan dukungan dari sesama mahasiswa. Kamu tidak sendirian.
+        </p>
+        <button onclick="openModal()" class="animate-fade-up px-8 py-3 bg-[#7CC6F2] text-white rounded-full font-medium hover:bg-[#7CC6F2]/90 transition-colors shadow-md hover:scale-105 transform" style="animation-delay: 0.3s;">
+          Bagikan Ceritamu
+        </button>
+      </div>
+    </div>
+
+    <div id="storiesContainer" class="max-w-4xl mx-auto px-4 py-12 space-y-6">
+      </div>
+
+    <div class="max-w-4xl mx-auto px-4 text-center pb-8">
+      <button onclick="openModal()" class="px-8 py-3 bg-white border-2 border-[#7CC6F2] text-[#7CC6F2] rounded-full font-medium hover:bg-[#7CC6F2] hover:text-white hover:scale-105 transition-all animate-fade-up">
+        + Tambah Cerita
+      </button>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 pb-16">
+      <div class="bg-gradient-to-br from-[#A7D8F5]/10 to-[#7CC6F2]/10 rounded-2xl p-8 border-2 border-[#A7D8F5]/20 animate-fade-up">
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-sparkles text-[#7CC6F2] text-2xl flex-shrink-0 mt-1"></i>
+          <div>
+            <h3 class="text-xl font-semibold text-[#3A3A3A] mb-3">Pedoman Komunitas</h3>
+            <ul class="space-y-2 text-[#3A3A3A]">
+              <li class="flex items-start gap-2"><span class="text-[#7CC6F2]">•</span> Hormati privasi dan cerita orang lain. Semua cerita bersifat anonim.</li>
+              <li class="flex items-start gap-2"><span class="text-[#7CC6F2]">•</span> Berikan dukungan positif. Hindari judgment dan komentar negatif.</li>
+              <li class="flex items-start gap-2"><span class="text-[#7CC6F2]">•</span> Jika kamu atau teman butuh bantuan profesional, hubungi layanan konseling kampus.</li>
+              <li class="flex items-start gap-2"><span class="text-[#7CC6F2]">•</span> Mari ciptakan ruang yang aman dan supportive untuk semua.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="storyModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-2xl w-full max-w-xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="modalContent">
+      <div class="flex items-center justify-between p-6 border-b border-[#A7D8F5]/20">
+        <h2 class="text-xl font-bold text-[#3A3A3A]">Bagikan Cerita</h2>
+        <button onclick="closeModal()" class="text-[#6B6B6B] hover:text-red-500"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <form onsubmit="submitStory(event)" class="p-6 space-y-4">
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="text-xs font-medium text-[#6B6B6B]">Nama</label>
+            <input type="text" id="storyName" placeholder="Nama atau samaran" required class="px-3 py-2 rounded-lg border-2 border-[#A7D8F5]/20 focus:border-[#7CC6F2] focus:outline-none text-sm w-full">
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="text-xs font-medium text-[#6B6B6B]">Kategori</label>
+            <select id="storyCategory" class="px-3 py-2 rounded-lg border-2 border-[#A7D8F5]/20 focus:border-[#7CC6F2] focus:outline-none text-sm w-full">
+              <option value="akademik">Akademik</option>
+              <option value="mental-health">Kesehatan Mental</option>
+              <option value="organisasi">Organisasi</option>
+              <option value="karier">Karier</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <label class="text-xs font-medium text-[#6B6B6B]">Cerita Kamu</label>
+          <textarea id="storyContent" rows="6" placeholder="Ceritakan pengalamanmu..." required class="px-3 py-2 rounded-lg border-2 border-[#A7D8F5]/20 focus:border-[#7CC6F2] focus:outline-none text-sm w-full resize-none"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-3 pt-4 border-t border-[#A7D8F5]/10">
+          <button type="button" onclick="closeModal()" class="px-6 py-2 bg-white border-2 border-[#A7D8F5]/20 text-[#3A3A3A] rounded-lg font-medium hover:border-[#7CC6F2]">Batal</button>
+          <button type="submit" class="px-6 py-2 bg-[#7CC6F2] text-white rounded-lg font-bold hover:bg-[#7CC6F2]/90 shadow-sm flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane text-sm"></i> Bagikan Cerita
+          </button>
+        </div>
+      </form>
+    </div>
+    <main class="flex-grow pb-8 bg-dots"></main>
+  </div>
+
+<footer class="bg-[#FFF8ED] border-t border-[#A7D8F5]/20 mt-auto">
+  <main class="flex-grow pb-8 bg-dots"></main>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 lg:gap-x-12">
+        
+        <div class="space-y-4 lg:col-span-1">
+          <div class="flex items-center gap-3">
+            <svg class="w-12 h-12 flex-shrink-0" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+              <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+              <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+              <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-[#3A3A3A] whitespace-nowrap" style="font-family: 'Itim', cursive;">Ruang Teman Unsoed</h3>
+              <p class="text-xs text-[#6B6B6B]">
+                Teman Bertanya, Berbagi,<br />dan Bertumbuh Bersama
+              </p>
+            </div>
+          </div>
+          <p class="text-sm text-[#6B6B6B]">
+            Platform edukasi dan dukungan mahasiswa Universitas Jenderal Soedirman
+          </p>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Navigasi</h4>
+          <ul class="space-y-2">
+            <li><a href="tanya-senior.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a></li>
+            <li><a href="ruang-cerita.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a></li>
+            <li><a href="self-assessment.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Self Assessment</a></li>
+            <li><a href="artikel.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Artikel</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Sumber Daya</h4>
+          <ul class="space-y-2">
+            <li><a href="roadmap.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Roadmap Mahasiswa</a></li>
+            <li><a href="contact.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Bantuan Kampus</a></li>
+            <li><a href="about.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:ml-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Kontak</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-sm text-[#6B6B6B]">
+              <i class="fa-solid fa-location-dot mt-1 flex-shrink-0 text-[#7CC6F2]"></i>
+              <span>Universitas Jenderal Soedirman, Purwokerto, Jawa Tengah</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-whatsapp flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://wa.me/620895621852750" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">WhatsApp: 0895621852750</a>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-instagram flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://instagram.com/ruangteman.unsoed" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">@ruangteman.unsoed</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#A7D8F5]/20 mt-10 pt-8 pb-4">
+        
+        <div class="text-center mb-5">
+          <p class="text-sm text-[#6B6B6B]">&copy; 2026 Ruang Teman Unsoed</p>
+        </div>
+
+        <div class="bg-[#F0F8FF]/60 rounded-full py-3 px-6 max-w-5xl mx-auto border border-[#A7D8F5]/30 mb-6 text-center shadow-sm">
+          <p class="text-sm text-[#6B6B6B]">
+            <strong class="text-[#3A3A3A]">Penafian:</strong> Website ini merupakan prototipe tugas akademik dan tidak terafiliasi resmi dengan Universitas Jenderal Soedirman.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-sm text-[#6B6B6B] flex items-center justify-center gap-2">
+            Dibuat <i class="fa-solid fa-heart text-[#7CC6F2] animate-pulse"></i> untuk Siswa Unsoed
+          </p>
+        </div>
+
+      </div>
+      
+    </div>
+  </footer>
+
+  <script>
+    // 1. Data Simulasi Cerita
+    let stories = [
+      { id: 1, author: "Lumine (Nama Disamarkan)", story: "Awal kuliah aku sering merasa minder karena teman-teman kelihatannya pintar semua. Setelah beberapa semester ternyata banyak yang juga sedang berusaha dan belajar. Sekarang aku lebih fokus berkembang daripada membandingkan diri dengan orang lain.", likes: 24, isLiked: false },
+      { id: 2, author: "Noctis (Nama Disamarkan)", story: "Minggu ini tugas benar-benar banyak sampai sempat kepikiran menyerah. Untung teman kelompok mau saling bantu dan akhirnya semua bisa selesai tepat waktu.", likes: 18, isLiked: false },
+      { id: 3, author: "Kirito (Nama Disamarkan)", story: "Dulu presentasi di depan kelas bikin gemetar. Sekarang masih deg-degan sih, tapi setidaknya sudah berani maju dan berbicara.", likes: 31, isLiked: false },
+      { id: 4, author: "Aether (Nama Disamarkan)", story: "Aku sempat gagal di beberapa mata kuliah dan merasa kecewa. Tapi ternyata kegagalan itu bikin aku lebih disiplin belajar.", likes: 27, isLiked: false }
+    ];
+
+    const container = document.getElementById('storiesContainer');
+    const modal = document.getElementById('storyModal');
+    const modalContent = document.getElementById('modalContent');
+
+    // 2. Fungsi Render Cerita
+    function renderStories() {
+      container.innerHTML = '';
+      stories.forEach((s, i) => {
+        
+        // Atur gaya tombol like berdasarkan status isLiked
+        const likeBtnClass = s.isLiked 
+          ? "bg-[#7CC6F2]/15 text-[#7CC6F2]" 
+          : "bg-[#A7D8F5]/10 text-[#6B6B6B] hover:bg-[#7CC6F2]/10 hover:text-[#7CC6F2]";
+        const heartIconClass = s.isLiked ? "fa-solid text-[#7CC6F2]" : "fa-regular";
+
+        const html = `
+          <div class="bg-white rounded-2xl border-2 border-[#A7D8F5]/20 p-6 shadow-sm hover:-translate-y-1 transition-transform duration-300 animate-fade-up" style="animation-delay: ${i * 0.08}s">
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-9 h-9 rounded-full bg-gradient-to-br from-[#A7D8F5] to-[#7CC6F2] flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                    ${s.author.charAt(0)}
+                  </div>
+                  <span class="text-sm font-medium text-[#6B6B6B]">${s.author}</span>
+                </div>
+                <p class="text-[#3A3A3A] leading-relaxed">${s.story}</p>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-[#A7D8F5]/10 flex items-center gap-2">
+              <button onclick="toggleLike(${s.id})" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-colors transform hover:scale-105 active:scale-95 ${likeBtnClass}">
+                <i class="${heartIconClass} fa-heart"></i>
+                <span id="like-count-${s.id}">${s.likes}</span>
+              </button>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', html);
+      });
+    }
+
+    // 3. Fungsi Toggle Like (Tanpa Re-render seluruh daftar agar animasi tidak berulang)
+    function toggleLike(id) {
+      const story = stories.find(s => s.id === id);
+      if(story) {
+        story.isLiked = !story.isLiked;
+        story.likes += story.isLiked ? 1 : -1;
+        
+        // Panggil render ulang untuk mempermudah pembaruan tampilan
+        // Dalam simulasi nyata, lebih baik memanipulasi DOM spesifik, namun ini cukup untuk prototipe
+        renderStories();
+      }
+    }
+
+    // 4. Logika Modal
+    function openModal() {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeModal() {
+      modal.classList.add('opacity-0');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => { modal.classList.add('hidden'); }, 300);
+    }
+
+    // 5. Fungsi Submit Cerita
+    function submitStory(e) {
+      e.preventDefault();
+      const name = document.getElementById('storyName').value;
+      const content = document.getElementById('storyContent').value;
+
+      // Tambahkan cerita ke array teratas
+      stories.unshift({
+        id: Date.now(),
+        author: name + " (Baru)",
+        story: content,
+        likes: 0,
+        isLiked: false
+      });
+
+      // Reset form & tutup modal
+      e.target.reset();
+      closeModal();
+      
+      // Render ulang daftar cerita
+      renderStories();
+    }
+
+    // Inisialisasi Pertama
+    renderStories();
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

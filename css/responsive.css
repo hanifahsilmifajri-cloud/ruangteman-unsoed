@@ -1,0 +1,24 @@
+/* =========================================
+   /css/responsive.css
+   Pengaturan Responsif untuk Mobile/Tablet
+========================================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+  }
+  
+  /* Tambahan dasar untuk memastikan padding mobile aman */
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

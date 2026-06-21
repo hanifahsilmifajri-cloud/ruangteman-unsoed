@@ -1,0 +1,154 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Inria+Sans:wght@300;400;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-heading: 'Itim', cursive;
+  --font-body: 'Inria Sans', sans-serif;
+  --font-size: 16px;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3rem;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Colors - Light Theme */
+  --background: #FFFFFF;
+  --foreground: #3A3A3A;
+  --primary: #A7D8F5;
+  --secondary: #FFF8ED;
+  --muted: #F5F5F5;
+  --accent: #7CC6F2;
+  --destructive: #EF4444;
+}
+
+/* Global Styles */
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+p, label, input, textarea, button {
+  font-family: var(--font-body);
+}
+
+.animate-fade-up {
+    animation-play-state: paused !important;
+    opacity: 0;
+}
+
+.animate-fade-up.is-visible {
+    animation-play-state: running !important;
+}
+
+.bg-dots {
+  background-color: #FAFCFF;
+  background-image: radial-gradient(#A7D8F5 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* =========================================================
+   KUMPULAN ANIMASI RUANG TEMAN (DIPANGGIL VIA JS)
+========================================================= */
+
+/* 1. Animasi Fade Up (Digunakan di banyak halaman) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { 
+  opacity: 0; 
+}
+.animate-fade-up.is-visible { 
+  animation: fadeUp 0.6s ease-out forwards; 
+}
+
+/* 2. Animasi Floating Blob (Halaman About & CTA) */
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -20px) scale(1.1); }
+}
+.animate-blob {
+  animation: float-blob 8s ease-in-out infinite;
+}
+
+/* 3. Animasi Roadmap (Meluncur Kiri, Kanan, Garis) */
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-line-grow {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.2s ease-out, opacity 0.5s ease-out;
+}
+.animate-slide-left.is-visible,
+.animate-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.animate-line-grow.is-visible {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/* 4. Animasi Akordion (Halaman Tanya Senior) */
+.accordion-content { 
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  max-height: 0; 
+  opacity: 0; 
+  overflow: hidden; 
+}
+.accordion-content.open { 
+  max-height: 1000px; 
+  opacity: 1; 
+}

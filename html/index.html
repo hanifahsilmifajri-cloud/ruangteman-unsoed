@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Teman UNSOED - Masa Kuliah Lebih Ringan</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Itim&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="bg-white text-[#3A3A3A] flex flex-col min-h-screen" style="font-family: 'Inria Sans', sans-serif;">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b border-[#A7D8F5]/20 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <svg class="w-10 h-10 transition-transform group-hover:scale-110" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+            <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+            <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-semibold text-lg text-[#3A3A3A] tracking-wide" style="font-family: 'Itim', cursive;">
+              Ruang Teman
+            </span>
+            <span class="text-xs text-[#6B6B6B] leading-none">Unsoed Student Support</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 bg-[#FFF8ED] text-[#7CC6F2] rounded-lg text-sm font-medium">Beranda</a>
+          <a href="tanya-senior.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+          <a href="ruang-cerita.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+          <a href="self-assessment.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+          <a href="roadmap.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+          <a href="artikel.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+          
+          <a href="login.html" class="ml-2 px-6 py-2 bg-[#7CC6F2] text-white rounded-full text-sm font-medium hover:bg-[#7CC6F2]/90 transition-colors flex items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Masuk
+          </a>
+        </div>
+
+        <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg hover:bg-[#FFF8ED] transition-colors">
+          <i class="fa-solid fa-bars text-2xl text-[#3A3A3A]" id="menu-icon"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-[#A7D8F5]/20 bg-white">
+        <div class="flex flex-col gap-1 px-4">
+          <a href="index.html" class="px-4 py-2.5 bg-[#FFF8ED] text-[#7CC6F2] rounded-lg text-sm font-medium">Beranda</a>
+          <a href="tanya-senior.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+          <a href="ruang-cerita.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+          <a href="self-assessment.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+          <a href="roadmap.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+          <a href="artikel.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+          <a href="contact.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+          
+          <a href="login.html" class="mt-4 py-2.5 bg-[#7CC6F2] text-white text-center rounded-full text-sm font-medium hover:bg-[#7CC6F2]/90 transition-colors block shadow-sm">
+            <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Dashboard / Masuk
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow pb-8">
+    
+    <!-- HEADER HERO -->
+    <section class="bg-gradient-to-br from-[#A7D8F5]/20 via-[#FFF8ED] to-white py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out">
+        <h1 class="text-4xl md:text-5xl font-semibold text-[#3A3A3A] leading-tight" style="font-family: 'Itim', cursive;">
+          Selamat Datang di <span class="text-[#7CC6F2]">Ruang Teman</span>
+        </h1>
+
+        <p class="text-lg text-[#6B6B6B] max-w-2xl mx-auto">
+          Ruang Teman membantu mahasiswa Unsoed menemukan jawaban, dukungan, dan panduan akademik dari sesama mahasiswa.
+        </p>
+
+        <div class="max-w-2xl mx-auto">
+          <div class="relative group">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[#6B6B6B]"></i>
+            <input
+              type="text"
+              placeholder="Apa yang ingin kamu tanyakan hari ini?"
+              class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-[#A7D8F5]/30 focus:border-[#7CC6F2] focus:outline-none bg-white shadow-lg transition-all"
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="login.html" class="px-8 py-3 bg-[#7CC6F2] text-white rounded-full font-medium hover:bg-[#7CC6F2]/90 hover:scale-105 transition-all shadow-md">
+            Masuk
+          </a>
+          <a href="tanya-senior.html" class="px-8 py-3 bg-white text-[#3A3A3A] rounded-full font-medium hover:bg-[#FFF8ED] hover:scale-105 transition-all shadow-md border-2 border-[#A7D8F5]/20">
+            Mulai Bertanya
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION KOTAK LAYANAN (Lebar disesuaikan agar tidak terlalu menyebar) -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out">
+          <h2 class="text-3xl font-semibold text-[#3A3A3A] mb-4" style="font-family: 'Itim', cursive;">Apa yang Bisa Kami Bantu?</h2>
+          <p class="text-[#6B6B6B]">Pilih layanan yang kamu butuhkan</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a href="tanya-senior.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 bg-[#A7D8F5] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-comments text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-[#3A3A3A]">Tanya Senior</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Bertanya tentang akademik, magang, organisasi, dan karier</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a href="ruang-cerita.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 bg-[#7CC6F2] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-heart text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-[#3A3A3A]">Ruang Cerita</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Berbagi pengalaman dan mendapat dukungan dari teman</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a href="self-assessment.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 300ms;">
+            <div class="w-14 h-14 bg-[#A7D8F5] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-clipboard-check text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-[#3A3A3A]">Self Assessment</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Cek kesehatan mental dan kesejahteraan kamu</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a href="artikel.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 400ms;">
+            <div class="w-14 h-14 bg-[#7CC6F2] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-book-open text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-[#3A3A3A]">Artikel</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Baca tips produktivitas, kesehatan mental, dan akademik</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a href="roadmap.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 500ms;">
+            <div class="w-14 h-14 bg-[#A7D8F5] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-route text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-[#3A3A3A]">Roadmap Semester</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Panduan perjalanan kuliah dari semester 1 hingga lulus</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Lihat Detail <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <a href="contact.html" class="group p-6 bg-white rounded-2xl border-2 border-[#A7D8F5]/20 hover:border-[#7CC6F2] hover:-translate-y-2 hover:shadow-xl transition-all block animate-on-scroll opacity-0 translate-y-10" style="transition-delay: 600ms;">
+            <div class="w-14 h-14 bg-[#FFF8ED] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-[#7CC6F2] transition-all">
+              <i class="fa-solid fa-headset text-[#7CC6F2] text-2xl group-hover:text-white transition-colors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-[#3A3A3A] mb-2">Bantuan Kampus</h3>
+            <p class="text-[#6B6B6B] text-sm mb-4">Akses layanan konseling resmi Unsoed dan dukungan akademik.</p>
+            <div class="flex items-center gap-2 text-[#7CC6F2] font-medium text-sm group-hover:gap-3 transition-all">
+              Cari Bantuan <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION QUOTES -->
+    <section class="py-16 bg-[#FFF8ED]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out">
+        <div class="space-y-6">
+          <div class="text-6xl animate-bounce">💙</div>
+          <blockquote class="text-2xl md:text-3xl font-medium text-[#3A3A3A] italic">
+            "Tidak apa-apa untuk tidak selalu baik-baik saja. Yang penting, kamu tidak sendirian."
+          </blockquote>
+          <p class="text-[#6B6B6B]">— Ruang Teman Unsoed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PENGUMUMAN PLATFORM -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out">
+        <div class="bg-gradient-to-br from-[#A7D8F5]/10 to-[#7CC6F2]/10 rounded-2xl p-8 border-2 border-[#A7D8F5]/20 text-center hover:scale-[1.01] transition-transform">
+          <h3 class="text-2xl font-semibold text-[#3A3A3A] mb-4">Platform Baru Diluncurkan! 🎉</h3>
+          <p class="text-[#3A3A3A] mb-6 max-w-2xl mx-auto">
+            Ruang Teman Unsoed adalah platform baru untuk mendukung mahasiswa. Jadilah salah satu pengguna pertama yang berbagi cerita, bertanya, dan memberikan apresiasi kepada sesama teman!
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="login.html" class="px-6 py-3 bg-[#7CC6F2] text-white rounded-full font-medium hover:bg-[#7CC6F2]/90 hover:scale-105 transition-all shadow-md">
+              Daftar Sekarang
+            </a>
+            <a href="roadmap.html" class="px-6 py-3 bg-white border-2 border-[#A7D8F5]/20 text-[#3A3A3A] rounded-full font-medium hover:border-[#7CC6F2] hover:scale-105 transition-all">
+              Lihat Roadmap
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION TENTANG KAMI -->
+    <section class="pt-16 pb-10 bg-[#FFF8ED]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-[700ms] ease-out">
+        <div class="bg-white rounded-3xl shadow-lg p-10 md:p-14">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <span class="text-sm font-semibold text-[#7CC6F2] uppercase tracking-wider">Tentang Kami</span>
+              <h2 class="text-4xl font-bold text-[#3A3A3A] mt-3 mb-5" style="font-family: 'Itim', cursive;">Kenal Lebih Dekat Dengan Ruang Teman</h2>
+              <p class="text-[#6B6B6B] leading-relaxed mb-6">
+                Ruang Teman Unsoed merupakan platform pendamping mahasiswa yang membantu mahasiswa memperoleh informasi akademik, berbagi pengalaman, serta mengembangkan diri selama masa perkuliahan.
+              </p>
+              <a href="about.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#7CC6F2] text-white rounded-xl hover:scale-105 hover:bg-[#7CC6F2]/90 transition-all">
+                Pelajari Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 animate-counter-trigger">
+              <div class="bg-[#A7D8F5]/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:scale-105 transition-all">
+                <h3 class="text-3xl font-bold text-[#7CC6F2]"><span class="counter" data-target="100">0</span>%</h3>
+                <p class="text-sm text-[#6B6B6B] mt-2">Fokus Mahasiswa</p>
+              </div>
+              <div class="bg-[#A7D8F5]/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:scale-105 transition-all">
+                <h3 class="text-3xl font-bold text-[#7CC6F2]"><span class="counter" data-target="6">0</span></h3>
+                <p class="text-sm text-[#6B6B6B] mt-2">Fitur Utama</p>
+              </div>
+              <div class="bg-[#A7D8F5]/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:scale-105 transition-all">
+                <h3 class="text-3xl font-bold text-[#7CC6F2]">24/7</h3>
+                <p class="text-sm text-[#6B6B6B] mt-2">Akses Platform</p>
+              </div>
+              <div class="bg-[#A7D8F5]/10 rounded-2xl p-6 text-center hover:-translate-y-2 hover:scale-105 transition-all">
+                <h3 class="text-3xl font-bold text-[#7CC6F2]"><span class="counter" data-target="1">0</span></h3>
+                <p class="text-sm text-[#6B6B6B] mt-2">Komunitas Mahasiswa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main class="flex-grow pb-8 bg-dots"></main>
+  </main>
+
+<footer class="bg-[#FFF8ED] border-t border-[#A7D8F5]/20 mt-auto">
+  <main class="flex-grow pb-8 bg-dots"></main>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 lg:gap-x-12">
+        
+        <div class="space-y-4 lg:col-span-1">
+          <div class="flex items-center gap-3">
+            <svg class="w-12 h-12 flex-shrink-0" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+              <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+              <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+              <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-[#3A3A3A] whitespace-nowrap" style="font-family: 'Itim', cursive;">Ruang Teman Unsoed</h3>
+              <p class="text-xs text-[#6B6B6B]">
+                Teman Bertanya, Berbagi,<br />dan Bertumbuh Bersama
+              </p>
+            </div>
+          </div>
+          <p class="text-sm text-[#6B6B6B]">
+            Platform edukasi dan dukungan mahasiswa Universitas Jenderal Soedirman
+          </p>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Navigasi</h4>
+          <ul class="space-y-2">
+            <li><a href="tanya-senior.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a></li>
+            <li><a href="ruang-cerita.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a></li>
+            <li><a href="self-assessment.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Self Assessment</a></li>
+            <li><a href="artikel.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Artikel</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Sumber Daya</h4>
+          <ul class="space-y-2">
+            <li><a href="roadmap.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Roadmap Mahasiswa</a></li>
+            <li><a href="contact.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Bantuan Kampus</a></li>
+            <li><a href="about.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:ml-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Kontak</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-sm text-[#6B6B6B]">
+              <i class="fa-solid fa-location-dot mt-1 flex-shrink-0 text-[#7CC6F2]"></i>
+              <span>Universitas Jenderal Soedirman, Purwokerto, Jawa Tengah</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-whatsapp flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://wa.me/620895621852750" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">WhatsApp: 0895621852750</a>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-instagram flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://instagram.com/ruangteman.unsoed" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">@ruangteman.unsoed</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#A7D8F5]/20 mt-10 pt-8 pb-4">
+        
+        <div class="text-center mb-5">
+          <p class="text-sm text-[#6B6B6B]">&copy; 2026 Ruang Teman Unsoed</p>
+        </div>
+
+        <div class="bg-[#F0F8FF]/60 rounded-full py-3 px-6 max-w-5xl mx-auto border border-[#A7D8F5]/30 mb-6 text-center shadow-sm">
+          <p class="text-sm text-[#6B6B6B]">
+            <strong class="text-[#3A3A3A]">Penafian:</strong> Website ini merupakan prototipe tugas akademik dan tidak terafiliasi resmi dengan Universitas Jenderal Soedirman.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-sm text-[#6B6B6B] flex items-center justify-center gap-2">
+            Dibuat <i class="fa-solid fa-heart text-[#7CC6F2] animate-pulse"></i> untuk Siswa Unsoed
+          </p>
+        </div>
+
+      </div>
+      
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll('.counter');
+        
+        const runCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const duration = 2000;
+            const stepTime = Math.abs(Math.floor(duration / target));
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += 1;
+                el.innerText = current;
+                if (current >= target) {
+                    clearInterval(timer);
+                    el.innerText = target;
+                }
+            }, stepTime);
+        };
+
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        const elements = entry.target.querySelectorAll('.counter');
+                        elements.forEach(el => runCounter(el));
+                    }, 300);
+                    obs.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const triggerBox = document.querySelector('.animate-counter-trigger');
+        if(triggerBox) counterObserver.observe(triggerBox);
+    });
+  </script>
+</body>
+</html>

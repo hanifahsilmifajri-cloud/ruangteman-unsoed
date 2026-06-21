@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Profil - Ruang Teman UNSOED</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Itim&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="bg-[#FFF8ED] text-[#3A3A3A] min-h-screen flex flex-col" style="font-family: 'Inria Sans', sans-serif;">
+
+  <nav class="bg-white border-b border-[#A7D8F5]/20 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        
+        <a href="index.html" class="flex items-center gap-3 group">
+          <svg class="w-10 h-10 transition-transform group-hover:scale-110" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+            <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+            <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+            <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+          </svg>
+          <div class="flex flex-col">
+            <span class="font-semibold text-lg text-[#3A3A3A] tracking-wide" style="font-family: 'Itim', cursive;">Ruang Teman</span>
+            <span class="text-xs text-[#6B6B6B] leading-none">Unsoed Student Support</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Beranda</a>
+          <a href="tanya-senior.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+          <a href="ruang-cerita.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+          <a href="self-assessment.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+          <a href="roadmap.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+          <a href="artikel.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+          <a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+          
+          <a href="dashboard.html" class="ml-2 px-6 py-2 bg-[#7CC6F2] text-white rounded-full text-sm font-medium shadow-sm flex items-center gap-2 cursor-default">
+            <i class="fa-solid fa-border-all"></i> Dashboard
+          </a>
+        </div>
+
+        <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg hover:bg-[#FFF8ED] transition-colors">
+          <i class="fa-solid fa-bars text-2xl text-[#3A3A3A]" id="menu-icon"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-[#A7D8F5]/20 bg-white">
+        <div class="flex flex-col gap-1 px-4">
+          <a href="index.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Beranda</a>
+          <a href="tanya-senior.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a>
+          <a href="ruang-cerita.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a>
+          <a href="self-assessment.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Self Assessment</a>
+          <a href="roadmap.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Roadmap</a>
+          <a href="artikel.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Artikel</a>
+          <a href="contact.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-[#3A3A3A] hover:bg-[#FFF8ED] hover:text-[#7CC6F2] transition-colors">Bantuan</a>
+          
+          <a href="dashboard.html" class="mt-4 py-2.5 bg-[#7CC6F2] text-white text-center rounded-full text-sm font-medium block shadow-sm">
+            <i class="fa-solid fa-border-all mr-2"></i> Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bg-white border-b border-gray-100 py-8 px-4 animate-fade-up is-visible">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-5">
+        <div class="w-16 h-16 rounded-full bg-[#7CC6F2] text-white flex items-center justify-center text-3xl shadow-sm">
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold text-[#1A202C]">Dashboard Profil</h1>
+          <p id="profile-email" class="text-sm text-[#6B6B6B]">Memuat email...</p>
+        </div>
+      </div>
+
+      <a href="index.html" onclick="logout()" class="px-5 py-2.5 bg-white border border-red-200 text-red-500 rounded-full text-sm font-bold hover:bg-red-50 transition-colors flex items-center gap-2 shadow-sm">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar Sesi
+      </a>
+      
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
+    
+    <h2 class="text-xl font-bold text-[#1A202C] mb-6 animate-fade-up is-visible" style="animation-delay: 100ms;">Ringkasan Aktivitas Saya</h2>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow animate-fade-up is-visible" style="animation-delay: 200ms;">
+        <div class="w-12 h-12 rounded-xl bg-[#A7D8F5] flex items-center justify-center text-white mb-6">
+          <i class="fa-regular fa-message text-xl"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#1A202C] mb-1">0</h3>
+        <p class="text-xs text-[#6B6B6B] font-medium">Pertanyaan Saya</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow animate-fade-up is-visible" style="animation-delay: 300ms;">
+        <div class="w-12 h-12 rounded-xl bg-[#7CC6F2] flex items-center justify-center text-white mb-6">
+          <i class="fa-regular fa-file-lines text-xl"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#1A202C] mb-1">0</h3>
+        <p class="text-xs text-[#6B6B6B] font-medium">Cerita Saya</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow animate-fade-up is-visible" style="animation-delay: 400ms;">
+        <div class="w-12 h-12 rounded-xl bg-[#A7D8F5] flex items-center justify-center text-white mb-6">
+          <i class="fa-regular fa-heart text-xl"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#1A202C] mb-1">0</h3>
+        <p class="text-xs text-[#6B6B6B] font-medium">Apresiasi Diterima</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow animate-fade-up is-visible" style="animation-delay: 500ms;">
+        <div class="w-12 h-12 rounded-xl bg-[#7CC6F2] flex items-center justify-center text-white mb-6">
+          <i class="fa-solid fa-arrow-trend-up text-xl"></i>
+        </div>
+        <h3 class="text-4xl font-bold text-[#1A202C] mb-1">0</h3>
+        <p class="text-xs text-[#6B6B6B] font-medium">Assessment Selesai</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 animate-fade-up is-visible" style="animation-delay: 600ms;">
+      
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col h-80">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-lg font-bold text-[#1A202C] flex items-center gap-2">
+            <i class="fa-regular fa-message text-[#7CC6F2]"></i> Riwayat Diskusi
+          </h3>
+          <a href="tanya-senior.html" class="text-xs font-bold text-[#7CC6F2] hover:underline">Lihat Forum</a>
+        </div>
+        
+        <div class="flex-grow flex flex-col items-center justify-center text-center opacity-60">
+          <div class="w-16 h-16 rounded-full bg-[#F0F8FF] flex items-center justify-center text-[#7CC6F2] mb-3">
+            <i class="fa-regular fa-comments text-2xl"></i>
+          </div>
+          <p class="text-sm font-bold text-[#3A3A3A] mb-1">Belum ada diskusi</p>
+          <p class="text-xs text-[#6B6B6B] max-w-[200px]">Ajukan pertanyaan pertamamu di forum Tanya Senior.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex flex-col h-80">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-lg font-bold text-[#1A202C] flex items-center gap-2">
+            <i class="fa-regular fa-file-lines text-[#7CC6F2]"></i> Jurnal Cerita Saya
+          </h3>
+          <a href="ruang-cerita.html" class="text-xs font-bold text-[#7CC6F2] hover:underline">Lihat Ruang Cerita</a>
+        </div>
+        
+        <div class="flex-grow flex flex-col items-center justify-center text-center opacity-60">
+          <div class="w-16 h-16 rounded-full bg-[#F0F8FF] flex items-center justify-center text-[#7CC6F2] mb-3">
+            <i class="fa-regular fa-folder-open text-2xl"></i>
+          </div>
+          <p class="text-sm font-bold text-[#3A3A3A] mb-1">Belum ada cerita</p>
+          <p class="text-xs text-[#6B6B6B] max-w-[200px]">Bagikan pengalaman atau keluh kesahmu di Ruang Cerita.</p>
+        </div>
+      </div>
+
+    </div>
+    <main class="flex-grow pb-8 bg-dots"></main>
+  </main>
+  
+ <footer class="bg-[#FFF8ED] border-t border-[#A7D8F5]/20 mt-auto">
+  <main class="flex-grow pb-8 bg-dots"></main>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 lg:gap-x-12">
+        
+        <div class="space-y-4 lg:col-span-1">
+          <div class="flex items-center gap-3">
+            <svg class="w-12 h-12 flex-shrink-0" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M60 100C60 100 25 75 25 50C25 35 35 25 50 25C55 25 60 27 60 27C60 27 65 25 70 25C85 25 95 35 95 50C95 75 60 100 60 100Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" />
+              <path d="M50 95L45 110L55 98Z" fill="#A7D8F5" stroke="#7CC6F2" stroke-width="2" stroke-linejoin="round" />
+              <circle cx="45" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M45 58C40 58 36 62 36 67L36 75C36 76 37 77 38 77L52 77C53 77 54 76 54 75L54 67C54 62 50 58 45 58Z" fill="#7CC6F2" />
+              <circle cx="75" cy="50" r="8" fill="#7CC6F2" />
+              <path d="M75 58C70 58 66 62 66 67L66 75C66 76 67 77 68 77L82 77C83 77 84 76 84 75L84 67C84 62 80 58 75 58Z" fill="#7CC6F2" />
+            </svg>
+            <div>
+              <h3 class="font-semibold text-[#3A3A3A] whitespace-nowrap" style="font-family: 'Itim', cursive;">Ruang Teman Unsoed</h3>
+              <p class="text-xs text-[#6B6B6B]">
+                Teman Bertanya, Berbagi,<br />dan Bertumbuh Bersama
+              </p>
+            </div>
+          </div>
+          <p class="text-sm text-[#6B6B6B]">
+            Platform edukasi dan dukungan mahasiswa Universitas Jenderal Soedirman
+          </p>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Navigasi</h4>
+          <ul class="space-y-2">
+            <li><a href="tanya-senior.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tanya Senior</a></li>
+            <li><a href="ruang-cerita.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Ruang Cerita</a></li>
+            <li><a href="self-assessment.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Self Assessment</a></li>
+            <li><a href="artikel.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Artikel</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:mx-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Sumber Daya</h4>
+          <ul class="space-y-2">
+            <li><a href="roadmap.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Roadmap Mahasiswa</a></li>
+            <li><a href="contact.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Bantuan Kampus</a></li>
+            <li><a href="about.html" class="text-sm text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">Tentang Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-1 lg:ml-auto">
+          <h4 class="font-semibold mb-4 text-[#3A3A3A]">Kontak</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-sm text-[#6B6B6B]">
+              <i class="fa-solid fa-location-dot mt-1 flex-shrink-0 text-[#7CC6F2]"></i>
+              <span>Universitas Jenderal Soedirman, Purwokerto, Jawa Tengah</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-whatsapp flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://wa.me/620895621852750" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">WhatsApp: 0895621852750</a>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i class="fa-brands fa-instagram flex-shrink-0 text-[#7CC6F2] text-lg"></i>
+              <a href="https://instagram.com/ruangteman.unsoed" target="_blank" rel="noopener noreferrer" class="text-[#6B6B6B] hover:text-[#7CC6F2] transition-colors">@ruangteman.unsoed</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-[#A7D8F5]/20 mt-10 pt-8 pb-4">
+        
+        <div class="text-center mb-5">
+          <p class="text-sm text-[#6B6B6B]">&copy; 2026 Ruang Teman Unsoed</p>
+        </div>
+
+        <div class="bg-[#F0F8FF]/60 rounded-full py-3 px-6 max-w-5xl mx-auto border border-[#A7D8F5]/30 mb-6 text-center shadow-sm">
+          <p class="text-sm text-[#6B6B6B]">
+            <strong class="text-[#3A3A3A]">Penafian:</strong> Website ini merupakan prototipe tugas akademik dan tidak terafiliasi resmi dengan Universitas Jenderal Soedirman.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-sm text-[#6B6B6B] flex items-center justify-center gap-2">
+            Dibuat <i class="fa-solid fa-heart text-[#7CC6F2] animate-pulse"></i> untuk Siswa Unsoed
+          </p>
+        </div>
+
+      </div>
+      
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Ambil data dari login
+      const savedEmail = localStorage.getItem("userEmail");
+      const profileEmail = document.getElementById('profile-email');
+      
+      if (savedEmail) {
+        profileEmail.innerText = savedEmail;
+      } else {
+        // Jika langsung buka dashboard tanpa lewat login.html
+        profileEmail.innerText = "mahasiswa@mhs.unsoed.ac.id"; 
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", "mahasiswa@mhs.unsoed.ac.id");
+      }
+    });
+
+    // 2. Fungsi Logout
+    function logout() {
+      // Hapus data saat Keluar Sesi ditekan
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("userEmail");
+      // HTML secara otomatis akan membuka index.html berkat tag href
+    }
+  </script>
+</body>
+</html>
